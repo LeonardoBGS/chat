@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                     FriendlyMessage friendlyMessage = dataSnapshot.getValue(FriendlyMessage.class);
-
+                    mMessageAdapter.setUsuario(friendlyMessage.getName());
                     mMessageAdapter.add(friendlyMessage);
                 }
 
